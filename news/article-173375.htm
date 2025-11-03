@@ -1,0 +1,306 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://ssrclient.github.io/news/article-173375.htm" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>深入解析Clash默认全局模式：配置技巧与实用指南</title>
+        <meta name="description" content="在现代网络环境中，科学上网和网络请求管理成为众多用户和开发者关注的重点。Clash，作为一款功能强大的网络代理工具，以其灵活的配置和强大的功能受到了广泛欢迎。在Clash众多的工作模式中，“默认全局模" />
+        <link rel="icon" href="/assets/website/img/freeclashverge/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="SSR客户端 免费机场订阅节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ssrclient.github.io/news/article-173375.htm" />
+    <meta property="og:site_name" content="SSR客户端 免费机场订阅节点官网" />
+    <meta property="og:title" content="深入解析Clash默认全局模式：配置技巧与实用指南" />
+    <meta property="og:image" content="https://ssrclient.github.io/uploads/20240813-1/5cc4a0f184db44386fb2dd7cf329dfcf.webp" />
+        <meta property="og:release_date" content="2025-11-03T08:34:46" />
+    <meta property="og:updated_time" content="2025-11-03T08:34:46" />
+        <meta property="og:description" content="在现代网络环境中，科学上网和网络请求管理成为众多用户和开发者关注的重点。Clash，作为一款功能强大的网络代理工具，以其灵活的配置和强大的功能受到了广泛欢迎。在Clash众多的工作模式中，“默认全局模" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="深入解析Clash默认全局模式：配置技巧与实用指南">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freeclashverge/bootstrap.css">
+    <link rel="stylesheet" href="/assets/website/js/frontend/freeclashverge/linericon/style.css">
+    <link rel="stylesheet" href="/assets/website/css/freeclashverge/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/website/js/frontend/freeclashverge/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/freeclashverge/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/website/js/frontend/freeclashverge/nice-select/css/nice-select.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="/assets/website/css/freeclashverge/style.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3YGKCN75EW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3YGKCN75EW');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854" crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--================ Start Header Area =================-->
+    <header class="header_area">
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <a class="navbar-brand logo_h" href="/">
+                                                <span>SSR客户端 节点分享平台</span>
+                                            </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav justify-content-end">
+                                                        <li class="nav-item"><a class="nav-link" href="/">首页</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/client.htm">客户端</a></li>
+                                                        <li class="nav-item"><a class="nav-link" href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--================ End Header Area =================-->
+    <!--================ Start Banner Area =================-->
+    <section class="banner_area">
+        <div class="banner_inner d-flex align-items-center">
+            <div class="container">
+                <div class="banner_content text-center">
+                    <h1>深入解析Clash默认全局模式：配置技巧与实用指南</h1>
+                    <div class="page_link">
+                        <a href="/">首页</a>
+                        <a href="/news/">新闻资讯</a>
+                        <span>正文</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================ End Banner Area =================-->
+    <!--================ Start About Us Area =================-->
+    <section class="about_area section_gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <input type="hidden" id="share-website-info" data-name="Clash Node免费节点站" data-url="https://clashnode.github.io">
+<div class="xcblog-blog-detail xcblog-blog-detail-defined">
+    
+<p data-start="29" data-end="255">在现代网络环境中，科学上网和网络请求管理成为众多用户和开发者关注的重点。Clash，作为一款功能强大的网络代理工具，以其灵活的配置和强大的功能受到了广泛欢迎。在Clash众多的工作模式中，“默认全局模式”因其简单高效的特性，成为许多新手和部分进阶用户的首选。然而，许多用户对默认全局模式存在疑惑：它究竟是什么？如何配置？有哪些实际应用场景？本文将围绕Clash的默认全局模式展开，全面解析其原理、配置步骤及常见问题，帮助你更好地理解和利用这一强大功能。</p>
+<hr data-start="257" data-end="260">
+<h2 data-start="262" data-end="278">Clash默认全局模式简介</h2>
+<p data-start="280" data-end="423">默认全局模式（Global Mode）是Clash中最直接的一种流量处理方式。它的核心思想是：<strong data-start="327" data-end="370">无论网络请求的目标地址是什么，所有的流量都会被强制通过预设的代理服务器进行转发</strong>。这与其他基于规则的模式不同，后者会根据配置文件中的规则，对不同请求进行分类处理，决定是否走代理或者直连。</p>
+<p data-start="425" data-end="439">默认全局模式的优势显而易见：</p>
+<ul data-start="441" data-end="553">
+<li data-start="441" data-end="484">
+<p data-start="443" data-end="484"><strong data-start="443" data-end="452">全流量代理</strong>：确保所有网络请求均能穿透网络限制，访问受限内容更简单直接。</p>
+</li>
+<li data-start="485" data-end="518">
+<p data-start="487" data-end="518"><strong data-start="487" data-end="495">配置简洁</strong>：无需复杂规则配置，适合新手用户快速上手。</p>
+</li>
+<li data-start="519" data-end="553">
+<p data-start="521" data-end="553"><strong data-start="521" data-end="529">稳定高效</strong>：避免了规则匹配过程带来的延迟，连接更流畅。</p>
+</li>
+</ul>
+<p data-start="555" data-end="594">当然，这种模式也存在一些局限，比如所有流量都经过代理，可能增加延迟和带宽消耗。</p>
+<hr data-start="596" data-end="599">
+<h2 data-start="601" data-end="617">默认全局模式的应用场景详解</h2>
+<p data-start="619" data-end="643">理解默认全局模式的应用场景，有助于更好地利用它。</p>
+<h3 data-start="645" data-end="658">1. 科学上网需求</h3>
+<p data-start="660" data-end="759">对于需要突破地区封锁，访问Google、YouTube、Facebook等被屏蔽网站的用户，默认全局模式提供了最简单有效的解决方案。开启该模式后，无需额外设置，所有流量均经过代理，确保访问畅通无阻。</p>
+<h3 data-start="761" data-end="777">2. 网络调试与数据抓包</h3>
+<p data-start="779" data-end="856">开发者或安全分析师在进行网络请求监测和数据抓包时，往往需要所有流量集中通过特定代理，便于统一管理和分析。默认全局模式完美满足这一需求，避免遗漏任何数据包。</p>
+<h3 data-start="858" data-end="875">3. 规则冲突时的应急方案</h3>
+<p data-start="877" data-end="934">当用户配置了过于复杂的规则，出现冲突或意外时，默认全局模式可以作为临时解决方案，确保网络流量不会因规则失效而中断。</p>
+<hr data-start="936" data-end="939">
+<h2 data-start="941" data-end="960">Clash默认全局模式的配置指南</h2>
+<p data-start="962" data-end="1000">正确配置默认全局模式，能够最大化发挥Clash的功能。下面是详细的步骤说明：</p>
+<h3 data-start="1002" data-end="1019">第一步：下载安装Clash</h3>
+<p data-start="1021" data-end="1119">根据你所使用的操作系统（Windows、macOS、Linux、Android、iOS等），访问Clash的官方网站或GitHub页面，下载适合的版本。安装步骤一般较为简单，按照提示操作即可完成。</p>
+<h3 data-start="1121" data-end="1138">第二步：打开并编辑配置文件</h3>
+<p data-start="1140" data-end="1212">Clash的配置文件通常为 <code data-start="1154" data-end="1167">config.yaml</code>，位于安装目录或用户指定的配置路径下。打开该文件，你会看到一个名为 <code data-start="1201" data-end="1207">mode</code> 的字段。</p>
+<p data-start="1214" data-end="1220">将其设置为：</p>
+<pre class="overflow-visible!" data-start="1222" data-end="1246"><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">yaml</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-yaml"><span><span><span class="hljs-attr">mode:</span></span><span> </span><span><span class="hljs-string">global</span></span><span>
+</span></span></code></div></div></pre>
+<p data-start="1248" data-end="1263">这一步即切换到了默认全局模式。</p>
+<h3 data-start="1265" data-end="1280">第三步：配置代理服务器</h3>
+<p data-start="1282" data-end="1334">确保配置文件中正确填写了代理服务器的相关信息，包括服务器地址、端口、用户名和密码（如果有）。以下为示例：</p>
+<pre class="overflow-visible!" data-start="1336" data-end="1497"><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">yaml</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-yaml"><span><span><span class="hljs-attr">proxies:</span></span><span>
+  </span><span><span class="hljs-bullet">-</span></span><span> </span><span><span class="hljs-attr">name:</span></span><span> </span><span><span class="hljs-string">"MyProxy"</span></span><span>
+    </span><span><span class="hljs-attr">type:</span></span><span> </span><span><span class="hljs-string">vmess</span></span><span>
+    </span><span><span class="hljs-attr">server:</span></span><span> </span><span><span class="hljs-number">123.123</span></span><span><span class="hljs-number">.123</span></span><span><span class="hljs-number">.123</span></span><span>
+    </span><span><span class="hljs-attr">port:</span></span><span> </span><span><span class="hljs-number">443</span></span><span>
+    </span><span><span class="hljs-attr">uuid:</span></span><span> </span><span><span class="hljs-string">"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"</span></span><span>
+    </span><span><span class="hljs-attr">tls:</span></span><span> </span><span><span class="hljs-literal">true</span></span><span>
+</span></span></code></div></div></pre>
+<p data-start="1499" data-end="1543">请根据实际使用的代理类型（vmess、shadowsocks、trojan等）进行配置。</p>
+<h3 data-start="1545" data-end="1563">第四步：保存并重启Clash</h3>
+<p data-start="1565" data-end="1595">编辑完成后，保存配置文件并重启Clash客户端，使配置生效。</p>
+<h3 data-start="1597" data-end="1611">第五步：验证连接状态</h3>
+<p data-start="1613" data-end="1667">打开浏览器访问被屏蔽的网站，或者使用网络诊断工具检测代理是否生效。通常，成功访问意味着默认全局模式配置正确。</p>
+<hr data-start="1669" data-end="1672">
+<h2 data-start="1674" data-end="1689">默认全局模式常见疑问解答</h2>
+<h3 data-start="1691" data-end="1715">Q1: 使用默认全局模式会不会影响网速？</h3>
+<p data-start="1717" data-end="1749">答：默认全局模式下所有流量都通过代理服务器，网速受以下因素影响：</p>
+<ul data-start="1751" data-end="1793">
+<li data-start="1751" data-end="1765">
+<p data-start="1753" data-end="1765">代理服务器性能和负载</p>
+</li>
+<li data-start="1766" data-end="1779">
+<p data-start="1768" data-end="1779">本地网络质量和带宽</p>
+</li>
+<li data-start="1780" data-end="1793">
+<p data-start="1782" data-end="1793">目标网站的响应速度</p>
+</li>
+</ul>
+<p data-start="1795" data-end="1827">高性能代理通常能提供良好的速度体验，但某些情况下可能比直连稍慢。</p>
+<h3 data-start="1829" data-end="1847">Q2: 如何切换到其他模式？</h3>
+<p data-start="1849" data-end="1916">答：如果你想使用基于规则的模式（rule）或直连模式（direct），只需编辑 <code data-start="1889" data-end="1902">config.yaml</code> 中的 <code data-start="1906" data-end="1912">mode</code> 字段：</p>
+<pre class="overflow-visible!" data-start="1918" data-end="1940"><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">yaml</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-yaml"><span><span><span class="hljs-attr">mode:</span></span><span> </span><span><span class="hljs-string">rule</span></span><span>
+</span></span></code></div></div></pre>
+<p data-start="1942" data-end="1943">或</p>
+<pre class="overflow-visible!" data-start="1945" data-end="1969"><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">yaml</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-yaml"><span><span><span class="hljs-attr">mode:</span></span><span> </span><span><span class="hljs-string">direct</span></span><span>
+</span></span></code></div></div></pre>
+<p data-start="1971" data-end="1984">保存并重启Clash即可。</p>
+<h3 data-start="1986" data-end="2004">Q3: 默认全局模式安全吗？</h3>
+<p data-start="2006" data-end="2069">答：安全性依赖于代理服务器的品质。使用知名且可信赖的服务器可有效保障隐私和数据安全。切勿使用未知或免费代理，以免泄露敏感信息。</p>
+<h3 data-start="2071" data-end="2102">Q4: Clash默认全局模式会与其他网络工具冲突吗？</h3>
+<p data-start="2104" data-end="2149">答：可能会。使用默认全局模式时，建议关闭系统级别的其他代理设置，避免多重代理引发网络异常。</p>
+<hr data-start="2151" data-end="2154">
+<h2 data-start="2156" data-end="2168">进阶技巧与优化建议</h2>
+<ul data-start="2170" data-end="2350">
+<li data-start="2170" data-end="2217">
+<p data-start="2172" data-end="2217"><strong data-start="2172" data-end="2182">动态切换模式</strong>：根据需求灵活切换全局、规则和直连模式，既保证速度又兼顾访问自由。</p>
+</li>
+<li data-start="2218" data-end="2263">
+<p data-start="2220" data-end="2263"><strong data-start="2220" data-end="2235">自定义规则搭配全局模式</strong>：部分流量走规则，关键流量走全局，兼顾效率与灵活性。</p>
+</li>
+<li data-start="2264" data-end="2307">
+<p data-start="2266" data-end="2307"><strong data-start="2266" data-end="2277">代理服务器监控</strong>：定期检查代理服务器状态，避免因服务器故障导致全局断网。</p>
+</li>
+<li data-start="2308" data-end="2350">
+<p data-start="2310" data-end="2350"><strong data-start="2310" data-end="2318">日志分析</strong>：利用Clash日志功能，了解流量走向及异常，便于排查问题。</p>
+</li>
+</ul>
+<hr data-start="2352" data-end="2355">
+<h2 data-start="2357" data-end="2362">总结</h2>
+<p data-start="2364" data-end="2498">Clash的默认全局模式以其简洁高效的特性，为用户提供了强有力的网络代理解决方案。无论是初学者快速实现科学上网，还是开发者进行流量抓包分析，默认全局模式都能带来稳定流畅的体验。掌握其配置方法和注意事项，能够帮助你充分发挥Clash的强大功能，确保网络访问的自由与安全。</p>
+<hr data-start="2500" data-end="2503">
+<h2 data-start="2505" data-end="2514">语言精彩点评</h2>
+<p data-start="2516" data-end="2714" data-is-last-node="" data-is-only-node="">本文语言简洁明了，条理清晰，既深入解析了Clash默认全局模式的核心概念，又提供了详实的配置指南和实用建议，极具参考价值。文章结构合理，先介绍基本原理，再结合实际应用场景，最后辅以操作步骤和疑问解答，层层递进，便于读者系统掌握。内容不仅技术细节丰富，还关注用户体验，体现了对不同层次读者需求的精准把握。整体文字风格专业且不失亲切，使得复杂的网络代理知识易于理解，适合广大网络爱好者和技术人员阅读。</p></div>
+<div class="clearfix"></div>
+<div class="col-md-12 mt-5">
+        <p>上一个：<a href="/news/article-172990.htm">如何在苹果手机上安装和配置V2Ray：详细指南</a></p>
+    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-172220.htm" title="Lumia科学上网全攻略：从入门到精通的完整指南">Lumia科学上网全攻略：从入门到精通的完整指南</a></li>
+                        <li class="py-2"><a href="/news/article-169514.htm" title="突破网络边界：v2rayng节点配置全攻略与深度解析">突破网络边界：v2rayng节点配置全攻略与深度解析</a></li>
+                        <li class="py-2"><a href="/news/article-169518.htm" title="科学上网后的应用程序推荐：畅享全球互联网世界">科学上网后的应用程序推荐：畅享全球互联网世界</a></li>
+                        <li class="py-2"><a href="/news/article-172605.htm" title="免费V2Ray节点链接分享与使用指南">免费V2Ray节点链接分享与使用指南</a></li>
+                        <li class="py-2"><a href="/news/article-171834.htm" title="打破流量焦虑：联通手厅免流V2Ray配置全指南与实战技巧分享">打破流量焦虑：联通手厅免流V2Ray配置全指南与实战技巧分享</a></li>
+                        <li class="py-2"><a href="/news/article-172990.htm" title="如何在苹果手机上安装和配置V2Ray：详细指南">如何在苹果手机上安装和配置V2Ray：详细指南</a></li>
+                        <li class="py-2"><a href="/news/article-170290.htm" title="科学上网与游戏加速：提升网络体验的终极指南">科学上网与游戏加速：提升网络体验的终极指南</a></li>
+                        <li class="py-2"><a href="/news/article-171062.htm" title="V2Ray到Quantumult的终极迁移指南：解锁iOS网络管理新境界">V2Ray到Quantumult的终极迁移指南：解锁iOS网络管理新境界</a></li>
+                        <li class="py-2"><a href="/news/article-171447.htm" title="深度指南：在iOS上使用Vmess实现安全稳定的科学上网体验">深度指南：在iOS上使用Vmess实现安全稳定的科学上网体验</a></li>
+                        <li class="py-2"><a href="/news/article-169906.htm" title="突破网络边界：2024年最佳免费科学上网工具全指南与深度实践手册">突破网络边界：2024年最佳免费科学上网工具全指南与深度实践手册</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">3</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">9</span> <a href="/date/2025-10/" title="2025-10 归档">2025-10</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================ End About Us Area =================-->
+        <!--================Footer Area =================-->
+    <footer class="footer_area">
+        <div class="container">
+            <div class="row footer_bottom justify-content-center">
+                <p class="col-lg-8 col-sm-12 footer-text">
+                                        <p>本站内容仅供学习与技术研究用途，无意传播或倡导任何违反法律法规的行为。在此声明：用户须自行了解所在地法律法规，合法合规使用；因使用不当产生的法律责任，与本站及作者无关；请在使用前仔细阅读本声明，继续使用即视为同意以上条款。</p>
+                    <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                                        SSR客户端 免费机场订阅节点官网 版权所有 Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!--================End Footer Area =================-->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/assets/website/js/frontend/freeclashverge/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/freeclashverge/popper.js"></script>
+    <script src="/assets/website/js/frontend/freeclashverge/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/freeclashverge/stellar.js"></script>
+    <script src="/assets/website/js/frontend/freeclashverge/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/freeclashverge/nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="/assets/website/js/frontend/freeclashverge/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/freeclashverge/isotope/isotope-min.js"></script>
+    <script src="/assets/website/js/frontend/freeclashverge/owl-carousel/owl.carousel.min.js"></script>
+    <script src="/assets/website/js/frontend/freeclashverge/jquery.ajaxchimp.min.js"></script>
+    <script src="/assets/website/js/frontend/freeclashverge/mail-script.js"></script>
+    <!--gmaps Js-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+    <script src="/assets/website/js/frontend/freeclashverge/gmaps.min.js"></script>
+    <script src="/assets/website/js/frontend/freeclashverge/theme.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
