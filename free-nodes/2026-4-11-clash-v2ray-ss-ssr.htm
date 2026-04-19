@@ -352,9 +352,29 @@ v2rayNG 并不是那种“一键傻瓜化”的工具，它需要你具备一定
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>何为 fake-ip 模式，它的优缺点是什么？</h5></div>
+    <div class="panel-body">
+        fake-ip 是通过伪造 DNS 返回的 IP 地址让客户端透明代理流量，优点是兼容性好、无需修改应用代理设置；缺点是可能导致某些证书校验或 SNI 伪装失效，需要配合 DNS 与证书策略谨慎使用。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>PassWall2 在路由器上使用 TUN 模式会有什么影响？</h5></div>
     <div class="panel-body">
         启用 TUN 模式会拦截并转发路由器上全部或选定流量，这会增加路由器 CPU 与内存负担，可能影响路由器其他服务表现。建议在性能足够的设备上启用，或仅对特定设备/端口进行分流。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>V2Ray 的 ws+tls 传输模式有什么优点？</h5></div>
+    <div class="panel-body">
+        ws+tls 模式利用 WebSocket 伪装成普通 HTTPS 流量，使得防火墙难以区分代理与正常访问。该模式兼容性强，适合部署在支持 Nginx 或 Caddy 的 Web 服务器上。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Nekobox 是否支持多配置文件切换？</h5></div>
+    <div class="panel-body">
+        支持。Nekobox 允许用户创建多个配置文件并快速切换，适合在不同网络环境下使用不同规则。例如家用网络与移动数据可使用独立的配置方案。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Hysteria2 多路复用对即时通讯的优势是什么？</h5></div>
+    <div class="panel-body">
+        多路复用可让多个短连接共享同一通道，减少握手次数和加密开销，提高吞吐量和连接稳定性。适合即时通讯应用，保证消息快速传输和稳定接收。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Matsuri 节点延迟排序如何提高访问速度？</h5></div>
@@ -367,9 +387,9 @@ v2rayNG 并不是那种“一键傻瓜化”的工具，它需要你具备一定
         可以。WinXray 支持编辑路由规则文件，用户可设置域名白名单或黑名单，实现分流策略。例如国内流量直连、国外流量走代理，从而提高网络访问效率。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekobox 是否支持多配置文件切换？</h5></div>
+    <div class="panel-heading"><h5>SSR 的协议插件如何增强连接稳定性？</h5></div>
     <div class="panel-body">
-        支持。Nekobox 允许用户创建多个配置文件并快速切换，适合在不同网络环境下使用不同规则。例如家用网络与移动数据可使用独立的配置方案。<hr />    </div>
+        SSR 的协议插件可以增加流量的伪装特性，模拟常见协议或浏览器行为，从而降低被识别和封锁的风险。这对不稳定网络或高封锁环境尤其有帮助。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>在 Clash 中使用混合代理模式有什么好处？</h5></div>
@@ -377,29 +397,9 @@ v2rayNG 并不是那种“一键傻瓜化”的工具，它需要你具备一定
         Clash 的混合代理模式允许同时运行多个代理协议和端口监听，从而实现流量分流。它可以为不同的应用或域名设置不同的代理方式，提高灵活性与连接稳定性，非常适合多协议用户使用。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>何为 fake-ip 模式，它的优缺点是什么？</h5></div>
-    <div class="panel-body">
-        fake-ip 是通过伪造 DNS 返回的 IP 地址让客户端透明代理流量，优点是兼容性好、无需修改应用代理设置；缺点是可能导致某些证书校验或 SNI 伪装失效，需要配合 DNS 与证书策略谨慎使用。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Hysteria2 多路复用对即时通讯的优势是什么？</h5></div>
-    <div class="panel-body">
-        多路复用可让多个短连接共享同一通道，减少握手次数和加密开销，提高吞吐量和连接稳定性。适合即时通讯应用，保证消息快速传输和稳定接收。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Nekoray 节点订阅失败如何解决？</h5></div>
     <div class="panel-body">
-        确认订阅 URL 是否有效并检查网络通畅。可手动刷新或重新添加订阅链接，保证节点列表最新。结合策略组使用，可确保稳定科学上网体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 的 ws+tls 传输模式有什么优点？</h5></div>
-    <div class="panel-body">
-        ws+tls 模式利用 WebSocket 伪装成普通 HTTPS 流量，使得防火墙难以区分代理与正常访问。该模式兼容性强，适合部署在支持 Nginx 或 Caddy 的 Web 服务器上。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 的协议插件如何增强连接稳定性？</h5></div>
-    <div class="panel-body">
-        SSR 的协议插件可以增加流量的伪装特性，模拟常见协议或浏览器行为，从而降低被识别和封锁的风险。这对不稳定网络或高封锁环境尤其有帮助。    </div>
+        确认订阅 URL 是否有效并检查网络通畅。可手动刷新或重新添加订阅链接，保证节点列表最新。结合策略组使用，可确保稳定科学上网体验。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -428,16 +428,16 @@ v2rayNG 并不是那种“一键傻瓜化”的工具，它需要你具备一定
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/news/article-221992.htm" title="深入剖析《保持微笑》中的“Clash”歌词：情感冲突与生活态度">深入剖析《保持微笑》中的“Clash”歌词：情感冲突与生活态度</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-18-clash-stash.htm" title="SSR客户端 - 3月18日23M/S|免费Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Singbox节点/Trojan节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 3月18日23M/S|免费Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Singbox节点/Trojan节点节点推荐，V2ray梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-17-clash-verge-rev-node.htm" title="SSR客户端 - 3月17日21.1M/S|免费Clash节点/Trojan节点/SSR节点/Shadowrocket节点/V2ray节点/Singbox节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 3月17日21.1M/S|免费Clash节点/Trojan节点/SSR节点/Shadowrocket节点/V2ray节点/Singbox节点节点推荐，V2ray梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-17-clash-stash-node.htm" title="SSR客户端 - 4月17日20.6M/S|免费Singbox节点/Shadowrocket节点/Clash节点/Trojan节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 4月17日20.6M/S|免费Singbox节点/Shadowrocket节点/Clash节点/Trojan节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-3-16-clash-meta-github.htm" title="SSR客户端 - 3月16日21.8M/S|免费Trojan节点/Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 3月16日21.8M/S|免费Trojan节点/Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点节点推荐，V2ray梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-3-28-clash-node.htm" title="SSR客户端 - 3月28日22.8M/S|免费Trojan节点/Clash节点/SSR节点/Shadowrocket节点/V2ray节点/Singbox节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 3月28日22.8M/S|免费Trojan节点/Clash节点/SSR节点/Shadowrocket节点/V2ray节点/Singbox节点节点推荐，V2ray梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/news/article-219919.htm" title="解锁网络自由：搬瓦工VPS搭配Shadowrocket的完整使用指南">解锁网络自由：搬瓦工VPS搭配Shadowrocket的完整使用指南</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-3-19-clash-stash.htm" title="SSR客户端 - 3月19日18.4M/S|免费Clash节点/SSR节点/V2ray节点/Trojan节点/Shadowrocket节点/Singbox节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 3月19日18.4M/S|免费Clash节点/SSR节点/V2ray节点/Trojan节点/Shadowrocket节点/Singbox节点节点推荐，V2ray梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-11-clash-v2ray-ss-ssr.htm" title="SSR客户端 - 4月11日19.9M/S|免费V2ray节点/Shadowrocket节点/Clash节点/Trojan节点/SSR节点/Singbox节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 4月11日19.9M/S|免费V2ray节点/Shadowrocket节点/Clash节点/Trojan节点/SSR节点/Singbox节点节点推荐，V2ray梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-13-clash-verge-rev-node-share.htm" title="SSR客户端 - 3月13日21.3M/S|免费SSR节点/Clash节点/Trojan节点/V2ray节点/Shadowrocket节点/Singbox节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 3月13日21.3M/S|免费SSR节点/Clash节点/Trojan节点/V2ray节点/Shadowrocket节点/Singbox节点节点推荐，V2ray梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/news/article-219491.htm" title="Opera浏览器：科学上网的便捷之选？全面解析使用技巧与体验">Opera浏览器：科学上网的便捷之选？全面解析使用技巧与体验</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-14-clash-verge-rev-node-share.htm" title="SSR客户端 - 3月14日18.9M/S|免费V2ray节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 3月14日18.9M/S|免费V2ray节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点节点推荐，V2ray梯子购买推荐</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-3-26-clash-verge-rev-node-github.htm" title="SSR客户端 - 3月26日19.8M/S|免费Clash节点/Trojan节点/V2ray节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 3月26日19.8M/S|免费Clash节点/Trojan节点/V2ray节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/news/article-222409.htm" title="菲律宾用户必备：Shadowrocket全方位使用指南与网络自由攻略">菲律宾用户必备：Shadowrocket全方位使用指南与网络自由攻略</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-3-29-clash-verge-rev-node-github.htm" title="SSR客户端 - 3月29日19.9M/S|免费SSR节点/Trojan节点/V2ray节点/Shadowrocket节点/Singbox节点/Clash节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 3月29日19.9M/S|免费SSR节点/Trojan节点/V2ray节点/Shadowrocket节点/Singbox节点/Clash节点节点推荐，V2ray梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-3-21-clash-verge-rev-node-github.htm" title="SSR客户端 - 3月21日18.4M/S|免费Singbox节点/SSR节点/Trojan节点/Clash节点/Shadowrocket节点/V2ray节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 3月21日18.4M/S|免费Singbox节点/SSR节点/Trojan节点/Clash节点/Shadowrocket节点/V2ray节点节点推荐，V2ray梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/news/article-219491.htm" title="Opera浏览器：科学上网的便捷之选？全面解析使用技巧与体验">Opera浏览器：科学上网的便捷之选？全面解析使用技巧与体验</a></li>
                     </ul>
     </div>
 </div>
@@ -449,7 +449,7 @@ v2rayNG 并不是那种“一键傻瓜化”的工具，它需要你具备一定
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">5</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
+                <h4><span class="badge" style="float: right;">12</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-03/" title="2026-03 归档">2026-03</a></h4>
