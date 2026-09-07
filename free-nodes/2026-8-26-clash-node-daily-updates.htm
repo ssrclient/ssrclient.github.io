@@ -340,34 +340,9 @@ A4：部分版本如 Clash Verge 支持智能模式切换，也可借助计划�
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 如何结合节点测速优化策略组？</h5></div>
+    <div class="panel-heading"><h5>Sing-box 的策略组可按 IP 段分流吗？</h5></div>
     <div class="panel-body">
-        PassWall2 会定期测速节点延迟和丢包率，并根据策略组自动选择最优节点。通过测速和自动切换，可保证网页、视频和游戏流量走低延迟节点，提升整体网络体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Netch 如何为游戏流量提供加速？</h5></div>
-    <div class="panel-body">
-        Netch 支持 UDP 转发，可为游戏流量建立高速通道。结合策略组和节点延迟检测，可减少丢包和延迟，保证游戏访问稳定流畅，提高网络体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 的 Profile URL 是否可以同时添加多个？</h5></div>
-    <div class="panel-body">
-        可以。Clash 支持导入多个 Profile URL，用户可在“配置”面板切换不同订阅源。多个配置之间互不干扰，方便区分不同地区或用途的线路。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan-Go 与 Trojan 有何不同？</h5></div>
-    <div class="panel-body">
-        Trojan-Go 是 Trojan 的分支版本，支持多路复用、QUIC、WebSocket 等新特性。它在兼容性和性能上都有显著提升，适合与现代客户端（如 Clash Meta、Sing-box）搭配使用。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan-Go 是否支持 WebSocket？</h5></div>
-    <div class="panel-body">
-        Trojan-Go 增强了原版 Trojan，支持 WebSocket、gRPC 等多种传输方式。通过这些传输层协议，可在伪装网站下运行代理服务，提高隐蔽性和灵活性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Matsuri 日志太多如何调整日志级别？</h5></div>
-    <div class="panel-body">
-        在 Matsuri 或其内核配置中修改日志级别参数（如从 debug 降为 info 或 warning），同时限制日志轮转与最大文件大小。生产环境建议关闭 debug 日志以减少磁盘 I/O 与性能影响。<hr />    </div>
+        支持。可通过 IP 段匹配将流量分流到指定节点。结合策略组，可实现国内直连、国外代理或游戏加速，实现精细化流量管理和优化网络访问。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Clash.Meta 与原版 Clash 有何不同？</h5></div>
@@ -375,19 +350,44 @@ A4：部分版本如 Clash Verge 支持智能模式切换，也可借助计划�
         Clash.Meta 是社区优化版本，支持更多传输协议，如 Hysteria、TUIC、Reality 等。它还增强了 DNS 处理逻辑和脚本分流能力，适合追求极致速度和灵活规则配置的高级用户。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Trojan 的连接失败常见原因有哪些？</h5></div>
+    <div class="panel-body">
+        Trojan 连接失败可能由于伪装域名错误、TLS 证书过期、防火墙阻挡端口或服务器不可达。通过查看客户端日志可以定位具体原因，并对症下药解决问题。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>如何在 macOS 上运行 ClashX？</h5></div>
     <div class="panel-body">
         ClashX 是 macOS 平台专用客户端，用户可在 GitHub 下载 DMG 安装包。安装后导入订阅即可使用，支持系统代理集成、自动更新和延迟测试。界面简洁直观，深受苹果用户欢迎。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 的策略组可按 IP 段分流吗？</h5></div>
+    <div class="panel-heading"><h5>Matsuri 日志太多如何调整日志级别？</h5></div>
     <div class="panel-body">
-        支持。可通过 IP 段匹配将流量分流到指定节点。结合策略组，可实现国内直连、国外代理或游戏加速，实现精细化流量管理和优化网络访问。<hr />    </div>
+        在 Matsuri 或其内核配置中修改日志级别参数（如从 debug 降为 info 或 warning），同时限制日志轮转与最大文件大小。生产环境建议关闭 debug 日志以减少磁盘 I/O 与性能影响。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan 的连接失败常见原因有哪些？</h5></div>
+    <div class="panel-heading"><h5>Netch 如何为游戏流量提供加速？</h5></div>
     <div class="panel-body">
-        Trojan 连接失败可能由于伪装域名错误、TLS 证书过期、防火墙阻挡端口或服务器不可达。通过查看客户端日志可以定位具体原因，并对症下药解决问题。    </div>
+        Netch 支持 UDP 转发，可为游戏流量建立高速通道。结合策略组和节点延迟检测，可减少丢包和延迟，保证游戏访问稳定流畅，提高网络体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Trojan-Go 是否支持 WebSocket？</h5></div>
+    <div class="panel-body">
+        Trojan-Go 增强了原版 Trojan，支持 WebSocket、gRPC 等多种传输方式。通过这些传输层协议，可在伪装网站下运行代理服务，提高隐蔽性和灵活性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Clash 的 Profile URL 是否可以同时添加多个？</h5></div>
+    <div class="panel-body">
+        可以。Clash 支持导入多个 Profile URL，用户可在“配置”面板切换不同订阅源。多个配置之间互不干扰，方便区分不同地区或用途的线路。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>PassWall2 如何结合节点测速优化策略组？</h5></div>
+    <div class="panel-body">
+        PassWall2 会定期测速节点延迟和丢包率，并根据策略组自动选择最优节点。通过测速和自动切换，可保证网页、视频和游戏流量走低延迟节点，提升整体网络体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Trojan-Go 与 Trojan 有何不同？</h5></div>
+    <div class="panel-body">
+        Trojan-Go 是 Trojan 的分支版本，支持多路复用、QUIC、WebSocket 等新特性。它在兼容性和性能上都有显著提升，适合与现代客户端（如 Clash Meta、Sing-box）搭配使用。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -435,16 +435,16 @@ A4：部分版本如 Clash Verge 支持智能模式切换，也可借助计划�
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/clash-stash-2026-8-7.htm" title="SSR客户端 - 8月7日19.3M/S|免费Trojan节点/SSR节点/Singbox节点/Clash节点/V2ray节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 8月7日19.3M/S|免费Trojan节点/SSR节点/Singbox节点/Clash节点/V2ray节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-22-free-node-subscribe.htm" title="SSR客户端 - 8月22日19.7M/S|免费Singbox节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点/Trojan节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 8月22日19.7M/S|免费Singbox节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点/Trojan节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-23-clash-stash.htm" title="SSR客户端 - 7月23日19.4M/S|免费Clash节点/Shadowrocket节点/Singbox节点/Trojan节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 7月23日19.4M/S|免费Clash节点/Shadowrocket节点/Singbox节点/Trojan节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-25-node-share.htm" title="SSR客户端 - 7月25日20.7M/S|免费SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/Trojan节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 7月25日20.7M/S|免费SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/Trojan节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/node-share-2026-8-23.htm" title="SSR客户端 - 8月23日20.6M/S|免费Shadowrocket节点/SSR节点/Singbox节点/Trojan节点/Clash节点/V2ray节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 8月23日20.6M/S|免费Shadowrocket节点/SSR节点/Singbox节点/Trojan节点/Clash节点/V2ray节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-26-clash-node.htm" title="SSR客户端 - 7月26日18.9M/S|免费SSR节点/Singbox节点/Shadowrocket节点/Trojan节点/V2ray节点/Clash节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 7月26日18.9M/S|免费SSR节点/Singbox节点/Shadowrocket节点/Trojan节点/V2ray节点/Clash节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-18-clash-node.htm" title="SSR客户端 - 8月18日21.2M/S|免费SSR节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 8月18日21.2M/S|免费SSR节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-node-github-2026-8-29.htm" title="SSR客户端 - 8月29日19.3M/S|免费Trojan节点/Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 8月29日19.3M/S|免费Trojan节点/Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-meta-github-2026-8-9.htm" title="SSR客户端 - 8月9日19.4M/S|免费SSR节点/V2ray节点/Trojan节点/Shadowrocket节点/Singbox节点/Clash节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 8月9日19.4M/S|免费SSR节点/V2ray节点/Trojan节点/Shadowrocket节点/Singbox节点/Clash节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-8-14-clash-stash-node.htm" title="SSR客户端 - 8月14日19M/S|免费Shadowrocket节点/Trojan节点/V2ray节点/Singbox节点/SSR节点/Clash节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 8月14日19M/S|免费Shadowrocket节点/Trojan节点/V2ray节点/Singbox节点/SSR节点/Clash节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-meta-github-2026-8-1.htm" title="SSR客户端 - 8月1日21.5M/S|免费Singbox节点/Clash节点/V2ray节点/SSR节点/Shadowrocket节点/Trojan节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 8月1日21.5M/S|免费Singbox节点/Clash节点/V2ray节点/SSR节点/Shadowrocket节点/Trojan节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-6-clash-node.htm" title="SSR客户端 - 8月6日21.3M/S|免费V2ray节点/Trojan节点/Shadowrocket节点/SSR节点/Clash节点/Singbox节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 8月6日21.3M/S|免费V2ray节点/Trojan节点/Shadowrocket节点/SSR节点/Clash节点/Singbox节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-2026-8-23.htm" title="SSR客户端 - 8月23日20.6M/S|免费Shadowrocket节点/SSR节点/Singbox节点/Trojan节点/Clash节点/V2ray节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 8月23日20.6M/S|免费Shadowrocket节点/SSR节点/Singbox节点/Trojan节点/Clash节点/V2ray节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-8-16-clash-stash-node.htm" title="SSR客户端 - 8月16日19.9M/S|免费Singbox节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点/Trojan节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 8月16日19.9M/S|免费Singbox节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点/Trojan节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-26-clash-node-daily-updates.htm" title="SSR客户端 - 8月26日20.4M/S|免费Trojan节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 8月26日20.4M/S|免费Trojan节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-24-clash-node.htm" title="SSR客户端 - 8月24日20.1M/S|免费Clash节点/Singbox节点/Trojan节点/Shadowrocket节点/SSR节点/V2ray节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 8月24日20.1M/S|免费Clash节点/Singbox节点/Trojan节点/Shadowrocket节点/SSR节点/V2ray节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-20-clash-verge-rev-github.htm" title="SSR客户端 - 8月20日21.1M/S|免费Singbox节点/SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Trojan节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 8月20日21.1M/S|免费Singbox节点/SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Trojan节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-node-github-2026-8-31.htm" title="SSR客户端 - 8月31日23M/S|免费Clash节点/Trojan节点/SSR节点/Shadowrocket节点/V2ray节点/Singbox节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 8月31日23M/S|免费Clash节点/Trojan节点/SSR节点/Shadowrocket节点/V2ray节点/Singbox节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -456,10 +456,10 @@ A4：部分版本如 Clash Verge 支持智能模式切换，也可借助计划�
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
+                <h4><span class="badge" style="float: right;">4</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">13</span> <a href="/date/2026-07/" title="2026-07 归档">2026-07</a></h4>
+                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
             </li>
                     </ul>
     </div>
