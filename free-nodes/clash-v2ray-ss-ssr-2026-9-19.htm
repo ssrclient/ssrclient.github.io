@@ -143,14 +143,29 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 的多策略组能带来什么优势？</h5></div>
-    <div class="panel-body">
-        多策略组可将节点按用途或地域分类，结合路由规则实现精准分流。用户无需频繁切换节点即可自动使用最佳线路，提高网络访问效率和稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Mellow TUN 模式与 SOCKS5 的差别？</h5></div>
     <div class="panel-body">
         TUN 模式拦截系统 IP 层流量，实现全局代理；SOCKS5 代理只影响支持代理的应用。TUN 适合全局加速，如游戏、视频和浏览器流量，提高网络稳定性和覆盖范围。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Shadowrocket 的分流规则如何优化视频播放？</h5></div>
+    <div class="panel-body">
+        通过分流规则，将流媒体域名匹配到高速节点，而其他流量走备用节点。保证视频播放流畅，同时节约带宽资源，提升整体网络速度和体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>SSR 协议和混淆选择如何影响稳定性？</h5></div>
+    <div class="panel-body">
+        根据网络封锁情况选择合适协议和混淆方式，如 tls1.2_ticket_auth 模拟 HTTPS 流量。合理组合可提升抗封锁能力和连接稳定性，确保节点长期可用，优化网络访问。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>如何配置 Clash 以支持局域网内设备共享代理？</h5></div>
+    <div class="panel-body">
+        启用 Clash 的 HTTP/SOCKS5 本地监听并在局域网设备上设置该代理地址为网关；若使用 TUN 模式需配合路由器或透明代理实现全局共享，注意开启访问控制避免未经授权的外部访问。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Hysteria2 的多路复用功能有哪些优势？</h5></div>
+    <div class="panel-body">
+        多路复用允许多个请求共享同一 QUIC 连接，减少握手次数和延迟。高并发情况下可以提升吞吐量和稳定性，特别适合短连接频繁请求的应用，如游戏或即时通讯。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Hiddify Next 的 Web 面板有什么用途？</h5></div>
@@ -163,34 +178,19 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         WebSocket + TLS 可以伪装成普通 HTTPS 流量，增强抗封锁能力。适合高封锁环境，结合域名伪装和策略组，可实现高安全性和稳定的网络访问体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>如何配置 Clash 以支持局域网内设备共享代理？</h5></div>
-    <div class="panel-body">
-        启用 Clash 的 HTTP/SOCKS5 本地监听并在局域网设备上设置该代理地址为网关；若使用 TUN 模式需配合路由器或透明代理实现全局共享，注意开启访问控制避免未经授权的外部访问。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 协议和混淆选择如何影响稳定性？</h5></div>
-    <div class="panel-body">
-        根据网络封锁情况选择合适协议和混淆方式，如 tls1.2_ticket_auth 模拟 HTTPS 流量。合理组合可提升抗封锁能力和连接稳定性，确保节点长期可用，优化网络访问。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Shadowrocket 的分流规则如何优化视频播放？</h5></div>
-    <div class="panel-body">
-        通过分流规则，将流媒体域名匹配到高速节点，而其他流量走备用节点。保证视频播放流畅，同时节约带宽资源，提升整体网络速度和体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>如何更新 Clash 的订阅节点？</h5></div>
-    <div class="panel-body">
-        在 Clash 中更新订阅节点，只需在配置页面中点击“Update”或“Refresh”按钮即可。系统会重新下载订阅链接中的内容，自动替换旧节点。这样能确保用户随时获取最新可用节点，避免连接失败或延迟过高。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Hiddify Next 的用户管理面板有哪些功能？</h5></div>
     <div class="panel-body">
         Hiddify Next 面板可添加或删除用户、设置带宽限制、生成订阅链接、查看流量统计和节点状态。它提供直观的图形界面，无需命令行操作即可管理服务器资源。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Hysteria2 的多路复用功能有哪些优势？</h5></div>
+    <div class="panel-heading"><h5>Sing-box 的多策略组能带来什么优势？</h5></div>
     <div class="panel-body">
-        多路复用允许多个请求共享同一 QUIC 连接，减少握手次数和延迟。高并发情况下可以提升吞吐量和稳定性，特别适合短连接频繁请求的应用，如游戏或即时通讯。    </div>
+        多策略组可将节点按用途或地域分类，结合路由规则实现精准分流。用户无需频繁切换节点即可自动使用最佳线路，提高网络访问效率和稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>如何更新 Clash 的订阅节点？</h5></div>
+    <div class="panel-body">
+        在 Clash 中更新订阅节点，只需在配置页面中点击“Update”或“Refresh”按钮即可。系统会重新下载订阅链接中的内容，自动替换旧节点。这样能确保用户随时获取最新可用节点，避免连接失败或延迟过高。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -238,16 +238,16 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-8-16-clash-stash-node.htm" title="SSR客户端 - 8月16日19.9M/S|免费Singbox节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点/Trojan节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 8月16日19.9M/S|免费Singbox节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点/Trojan节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-14-free-node-subscribe.htm" title="SSR客户端 - 9月14日19.1M/S|免费Shadowrocket节点/V2ray节点/Clash节点/Trojan节点/SSR节点/Singbox节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 9月14日19.1M/S|免费Shadowrocket节点/V2ray节点/Clash节点/Trojan节点/SSR节点/Singbox节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-2026-9-21.htm" title="SSR客户端 - 9月21日18.7M/S|免费Singbox节点/Clash节点/Trojan节点/V2ray节点/SSR节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 9月21日18.7M/S|免费Singbox节点/Clash节点/Trojan节点/V2ray节点/SSR节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-2026-8-13.htm" title="SSR客户端 - 8月13日20.5M/S|免费Singbox节点/Clash节点/V2ray节点/Trojan节点/Shadowrocket节点/SSR节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 8月13日20.5M/S|免费Singbox节点/Clash节点/V2ray节点/Trojan节点/Shadowrocket节点/SSR节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-26-clash-stash-node.htm" title="SSR客户端 - 9月26日19.8M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Singbox节点/Clash节点/Trojan节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 9月26日19.8M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Singbox节点/Clash节点/Trojan节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-meta-github-2026-9-25.htm" title="SSR客户端 - 9月25日19.1M/S|免费V2ray节点/Singbox节点/SSR节点/Trojan节点/Shadowrocket节点/Clash节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 9月25日19.1M/S|免费V2ray节点/Singbox节点/SSR节点/Trojan节点/Shadowrocket节点/Clash节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-6-clash-node.htm" title="SSR客户端 - 8月6日21.3M/S|免费V2ray节点/Trojan节点/Shadowrocket节点/SSR节点/Clash节点/Singbox节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 8月6日21.3M/S|免费V2ray节点/Trojan节点/Shadowrocket节点/SSR节点/Clash节点/Singbox节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-24-free-node-subscribe.htm" title="SSR客户端 - 9月24日18.1M/S|免费SSR节点/Singbox节点/Trojan节点/Clash节点/V2ray节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 9月24日18.1M/S|免费SSR节点/Singbox节点/Trojan节点/Clash节点/V2ray节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-node-github-2026-8-17.htm" title="SSR客户端 - 8月17日19.7M/S|免费Trojan节点/SSR节点/Shadowrocket节点/Clash节点/V2ray节点/Singbox节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 8月17日19.7M/S|免费Trojan节点/SSR节点/Shadowrocket节点/Clash节点/V2ray节点/Singbox节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-v2ray-ss-ssr-2026-9-19.htm" title="SSR客户端 - 9月19日20.3M/S|免费Clash节点/Shadowrocket节点/Trojan节点/V2ray节点/Singbox节点/SSR节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 9月19日20.3M/S|免费Clash节点/Shadowrocket节点/Trojan节点/V2ray节点/Singbox节点/SSR节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-9-2-clash-node.htm" title="SSR客户端 - 9月2日21.4M/S|免费Singbox节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点/Trojan节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 9月2日21.4M/S|免费Singbox节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点/Trojan节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/node-share-2026-9-13.htm" title="SSR客户端 - 9月13日22M/S|免费SSR节点/Singbox节点/Clash节点/Trojan节点/Shadowrocket节点/V2ray节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 9月13日22M/S|免费SSR节点/Singbox节点/Clash节点/Trojan节点/Shadowrocket节点/V2ray节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-4-free-node-subscribe.htm" title="SSR客户端 - 9月4日20.7M/S|免费Singbox节点/Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Trojan节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 9月4日20.7M/S|免费Singbox节点/Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Trojan节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-stash-2026-9-5.htm" title="SSR客户端 - 9月5日19.8M/S|免费Clash节点/Singbox节点/V2ray节点/Shadowrocket节点/SSR节点/Trojan节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 9月5日19.8M/S|免费Clash节点/Singbox节点/V2ray节点/Shadowrocket节点/SSR节点/Trojan节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-stash-2026-9-17.htm" title="SSR客户端 - 9月17日18.6M/S|免费V2ray节点/Trojan节点/Singbox节点/Clash节点/Shadowrocket节点/SSR节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 9月17日18.6M/S|免费V2ray节点/Trojan节点/Singbox节点/Clash节点/Shadowrocket节点/SSR节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-16-clash-stash-node.htm" title="SSR客户端 - 9月16日22.1M/S|免费Clash节点/Singbox节点/V2ray节点/SSR节点/Trojan节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 9月16日22.1M/S|免费Clash节点/Singbox节点/V2ray节点/SSR节点/Trojan节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-stash-2026-9-7.htm" title="SSR客户端 - 9月7日19.5M/S|免费Singbox节点/Shadowrocket节点/SSR节点/Clash节点/Trojan节点/V2ray节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 9月7日19.5M/S|免费Singbox节点/Shadowrocket节点/SSR节点/Clash节点/Trojan节点/V2ray节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-meta-github-2026-8-25.htm" title="SSR客户端 - 8月25日18.2M/S|免费SSR节点/Clash节点/Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 8月25日18.2M/S|免费SSR节点/Clash节点/Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-stash-2026-8-7.htm" title="SSR客户端 - 8月7日19.3M/S|免费Trojan节点/SSR节点/Singbox节点/Clash节点/V2ray节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐">SSR客户端 - 8月7日19.3M/S|免费Trojan节点/SSR节点/Singbox节点/Clash节点/V2ray节点/Shadowrocket节点节点推荐，V2ray梯子购买推荐</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -259,7 +259,7 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">21</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
+                <h4><span class="badge" style="float: right;">28</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
